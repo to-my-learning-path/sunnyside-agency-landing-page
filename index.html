@@ -18,29 +18,49 @@
     <header>
       <div class="header__nav">
         <img src="/images/logo.svg" alt="" class="logo" />
-        <nav class="primary-navigation">
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          data-visible="false"
+          aria-label="Site navigation"
+        >
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a class="contact-button" href="#">Contact</a></li>
+            <li><a href="#" aria-label="Read more about us">About</a></li>
+            <li>
+              <a href="#" aria-label="Read more about our Services">Services</a>
+            </li>
+            <li>
+              <a href="#" aria-label="Read more abour our Projects">Projects</a>
+            </li>
+            <li>
+              <a class="contact-button" href="#" aria-label="Contact us"
+                >Contact</a
+              >
+            </li>
           </ul>
         </nav>
-        <button class="toggle-button">
+        <button
+          class="toggle-button"
+          type="button"
+          aria-label="Toggle mobile navigation"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
           <img src="./images/icon-hamburger.svg" alt="" />
         </button>
       </div>
       <section class="header__hero">
         <h1>We are creatives</h1>
-        <img
-          class="header__hero-arrow"
-          src="./images/icon-arrow-down.svg"
-          alt=""
-        />
+        <a href="#section1" aria-label="Move down to next section"
+          ><img
+            class="header__hero-arrow"
+            src="./images/icon-arrow-down.svg"
+            alt=""
+        /></a>
       </section>
     </header>
     <main>
-      <section class="section1">
+      <section class="section1" id="section1">
         <div class="section1__image">
           <picture>
             <source
@@ -57,7 +77,12 @@
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
           </p>
-          <a class="learn-more-button" href="#">Learn more</a>
+          <a
+            class="learn-more-button"
+            href="#"
+            aria-label="Learn more about how to transform your brand"
+            >Learn more</a
+          >
         </div>
 
         <div>
@@ -76,14 +101,19 @@
             photographers, videographers, and copywriters, we'll build and
             extend your brand in digital places.
           </p>
-          <a class="learn-more-button" href="#">Learn more</a>
+          <a
+            class="learn-more-button"
+            href="#"
+            aria-label="Learn more on how to stand out to the right audience"
+            >Learn more</a
+          >
         </div>
       </section>
       <section class="section2">
         <div class="section2__content">
           <picture>
             <source
-              srcset="./images/desktop/image-graphic-design.jpg.jpg"
+              srcset="./images/desktop/image-graphic-design.jpg"
               media="(min-width: 600px)"
             />
             <img src="./images/mobile/image-graphic-design.jpg" alt="" />
@@ -100,7 +130,7 @@
         <div class="section2__content">
           <picture>
             <source
-              srcset="./images/desktop/image-photography.jpg.jpg"
+              srcset="./images/desktop/image-photography.jpg"
               media="(min-width: 600px)"
             />
             <img src="./images/mobile/image-photography.jpg" alt="" />
@@ -186,7 +216,7 @@
           <li>
             <picture>
               <source
-                srcset="./images/desktop/image-gallery-sugar-cubes.jpg"
+                srcset="./images/desktop/image-gallery-sugarcubes.jpg"
                 media="(min-width: 600px)"
               />
               <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
@@ -199,27 +229,40 @@
       <img src="./images/logo.svg" alt="" />
       <nav class="secondary-nav">
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#" aria-label="Read more about us">About</a></li>
+          <li>
+            <a href="#" aria-label="Read more about our Services">Services</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Read more abour our Projects">Projects</a>
+          </li>
         </ul>
       </nav>
       <div class="social-profiles">
         <ul>
           <li>
-            <a href=""><img src="./images/icon-facebook.svg" alt="" /></a>
+            <a href="#" aria-label="Facebook"
+              ><img src="./images/icon-facebook.svg" alt=""
+            /></a>
           </li>
           <li>
-            <a href=""><img src="./images/icon-instagram.svg" alt="" /></a>
+            <a href="#" aria-label="Instagram"
+              ><img src="./images/icon-instagram.svg" alt=""
+            /></a>
           </li>
           <li>
-            <a href=""><img src="./images/icon-twitter.svg" alt="" /></a>
+            <a href="#" aria-label="Twitter"
+              ><img src="./images/icon-twitter.svg" alt=""
+            /></a>
           </li>
           <li>
-            <a href=""><img src="./images/icon-pinterest.svg" alt="" /></a>
+            <a href="#" aria-label="Pinterest"
+              ><img src="./images/icon-pinterest.svg" alt=""
+            /></a>
           </li>
         </ul>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
