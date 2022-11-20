@@ -18,32 +18,50 @@
     <header>
       <div class="header__nav">
         <img src="/images/logo.svg" alt="" class="logo" />
-        <nav>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          data-visible="false"
+          aria-label="Site navigation"
+        >
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a class="contact-button" href="#">Contact</a></li>
+            <li><a href="#" aria-label="Read more about us">About</a></li>
+            <li>
+              <a href="#" aria-label="Read more about our Services">Services</a>
+            </li>
+            <li>
+              <a href="#" aria-label="Read more abour our Projects">Projects</a>
+            </li>
+            <li>
+              <a class="contact-button" href="#" aria-label="Contact us"
+                >Contact</a
+              >
+            </li>
           </ul>
         </nav>
+        <button
+          class="toggle-button"
+          type="button"
+          aria-label="Toggle mobile navigation"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <img src="./images/icon-hamburger.svg" alt="" />
+        </button>
       </div>
       <section class="header__hero">
         <h1>We are creatives</h1>
-        <img src="./images/icon-arrow-down.svg" alt="" />
+        <a href="#section1" aria-label="Move down to next section"
+          ><img
+            class="header__hero-arrow"
+            src="./images/icon-arrow-down.svg"
+            alt=""
+        /></a>
       </section>
     </header>
     <main>
-      <section>
-        <div>
-          <h2>Transform your brand</h2>
-          <p>
-            We are a full-service creative agency specializing in helping brands
-            grow fast. Engage your clients through compelling visuals that do
-            most of the marketing for you.
-          </p>
-          <a class="learn-more-button" href="#">Learn more</a>
-        </div>
-        <div>
+      <section class="section1" id="section1">
+        <div class="section1__image">
           <picture>
             <source
               srcset="./images/desktop/image-transform.jpg"
@@ -52,6 +70,21 @@
             <img src="./images/mobile/image-transform.jpg" alt="" />
           </picture>
         </div>
+        <div class="section1__content">
+          <h2>Transform your brand</h2>
+          <p>
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <a
+            class="learn-more-button"
+            href="#"
+            aria-label="Learn more about how to transform your brand"
+            >Learn more</a
+          >
+        </div>
+
         <div>
           <picture>
             <source
@@ -61,44 +94,67 @@
             <img src="./images/mobile/image-stand-out.jpg" alt="" />
           </picture>
         </div>
-        <div>
+        <div class="section1__content">
           <h2>Stand out to the right audience</h2>
           <p>
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we'll build and
             extend your brand in digital places.
           </p>
-          <a class="learn-more-button" href="#">Learn more</a>
+          <a
+            class="learn-more-button"
+            href="#"
+            aria-label="Learn more on how to stand out to the right audience"
+            >Learn more</a
+          >
         </div>
       </section>
-      <section>
-        <div>
-          <h2>Graphic design</h2>
-          <p>
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients'
-            attention.
-          </p>
+      <section class="section2">
+        <div class="section2__content">
+          <picture>
+            <source
+              srcset="./images/desktop/image-graphic-design.jpg"
+              media="(min-width: 600px)"
+            />
+            <img src="./images/mobile/image-graphic-design.jpg" alt="" />
+          </picture>
+          <div class="section2__body">
+            <h2>Graphic Design</h2>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients'
+              attention.
+            </p>
+          </div>
         </div>
-        <div>
-          <h2>Photography</h2>
-          <p>
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
-          </p>
+        <div class="section2__content">
+          <picture>
+            <source
+              srcset="./images/desktop/image-photography.jpg"
+              media="(min-width: 600px)"
+            />
+            <img src="./images/mobile/image-photography.jpg" alt="" />
+          </picture>
+          <div class="section2__body">
+            <h2>Photography</h2>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
         </div>
       </section>
-      <section>
+      <section class="section3">
         <h3>Client testimonials</h3>
-        <div>
-          <ul>
+        <div class="section3__content">
+          <ul class="section3__testimonial">
             <li>
               <img src="./images/image-emily.jpg" alt="" />
               <p>
                 We put our trust in Sunnyside and they delivered, making sure
                 our needs were met and deadlines were always hit.
               </p>
-              <div>
+              <div class="testimonial__profile">
                 <p>Emily R.</p>
                 <p>Marketing Director</p>
               </div>
@@ -107,9 +163,9 @@
               <img src="./images/image-thomas.jpg" alt="" />
               <p>
                 Sunnyside's enthusiasm coupled with their keen interest in our
-                brand’s success made it a satisfying and enjoyable experience.
+                brand's success made it a satisfying and enjoyable experience.
               </p>
-              <div>
+              <div class="testimonial__profile">
                 <p>Thomas S.</p>
                 <p>Chief Operating Officer</p>
               </div>
@@ -120,7 +176,7 @@
                 Incredible end result! Our sales increased over 400% when we
                 worked with Sunnyside. Highly recommended!
               </p>
-              <div>
+              <div class="testimonial__profile">
                 <p>Jennie F.</p>
                 <p>Business Owner</p>
               </div>
@@ -129,7 +185,7 @@
         </div>
       </section>
       <section>
-        <ul>
+        <ul class="gallery">
           <li>
             <picture>
               <source
@@ -160,7 +216,7 @@
           <li>
             <picture>
               <source
-                srcset="./images/desktop/image-gallery-sugar-cubes.jpg"
+                srcset="./images/desktop/image-gallery-sugarcubes.jpg"
                 media="(min-width: 600px)"
               />
               <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
@@ -171,31 +227,42 @@
     </main>
     <footer>
       <img src="./images/logo.svg" alt="" />
-      <div>
-        <nav>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
+      <nav class="secondary-nav">
+        <ul>
+          <li><a href="#" aria-label="Read more about us">About</a></li>
+          <li>
+            <a href="#" aria-label="Read more about our Services">Services</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Read more abour our Projects">Projects</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="social-profiles">
         <ul>
           <li>
-            <a href=""><img src="./images/icon-facebook.svg" alt="" /></a>
+            <a href="#" aria-label="Facebook"
+              ><img src="./images/icon-facebook.svg" alt=""
+            /></a>
           </li>
           <li>
-            <a href=""><img src="./images/icon-instagram.svg" alt="" /></a>
+            <a href="#" aria-label="Instagram"
+              ><img src="./images/icon-instagram.svg" alt=""
+            /></a>
           </li>
           <li>
-            <a href=""><img src="./images/icon-twitter.svg" alt="" /></a>
+            <a href="#" aria-label="Twitter"
+              ><img src="./images/icon-twitter.svg" alt=""
+            /></a>
           </li>
           <li>
-            <a href=""><img src="./images/icon-pinterest.svg" alt="" /></a>
+            <a href="#" aria-label="Pinterest"
+              ><img src="./images/icon-pinterest.svg" alt=""
+            /></a>
           </li>
         </ul>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
